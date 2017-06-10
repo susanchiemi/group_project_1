@@ -5,152 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Fantasy Football Draft App</title>
+  <title>Fantasy Football Chat</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-<div class="container">
-  <div class="col-md-3">
-
-<div class="panel panel-default">
-  <div class="panel-heading">Timer</div>
-  <div class="timer panel-body">
-    <h2>00:00</h2>
-  </div>
-</div>
-</div>
-      <div class="jumbotron">
-
-<div class="row">
-  <div class="col-md-12"><h3 class="text-center margin-space-bottom-60">Fantasy Football Draft</h3></div>
-  </div>
-
-        
-        <div class="container">
-
-  <!-- Computer player/user -->
-  <div class="row">
-  <div class="col-md-3">
-
-<div class="panel panel-default">
-  <div class="player-1 panel-heading">Player 1</div>
-  <div class="panel-body">
-  <ul class="list-group fantasy-scroll">
-  <li class="list-group-item qb-item">QB</li>
-  <li class="list-group-item wr-1-item">WR</li>
-  <li class="list-group-item wr-2-item">WR</li>
-  <li class="list-group-item rb-item">RB</li>
-  <li class="list-group-item te-item">TE</li>
-  <li class="list-group-item flx-item">FLX</li>
-  <li class="list-group-item k-item">K</li>
-  <li class="list-group-item d-st-item">D/ST</li>
-</ul>
-
-  </div>
-</div>
-
-  </div> <!-- end col-md-3-->
-
-  <div class="col-md-3">
-
-<div class="panel panel-default">
-  <div class="player-2 panel-heading">Player 2</div>
-  <div class="panel-body">
-   <ul class="list-group fantasy-scroll">
-  <li class="list-group-item qb-item">QB</li>
-  <li class="list-group-item wr-1-item">WR</li>
-  <li class="list-group-item wr-2-item">WR</li>
-  <li class="list-group-item rb-item">RB</li>
-  <li class="list-group-item te-item">TE</li>
-  <li class="list-group-item flx-item">FLX</li>
-  <li class="list-group-item k-item">K</li>
-  <li class="list-group-item d-st-item">D/ST</li>
-</ul>
-  </div>
-</div>
-
-  </div> <!-- end col-md-3-->
-
-  <div class="col-md-3">
-
-<div class="panel panel-default">
-  <div class="player-3 panel-heading">Player 3</div>
-  <div class="panel-body">
-    <ul class="list-group fantasy-scroll">
-  <li class="list-group-item qb-item">QB</li>
-  <li class="list-group-item wr-1-item">WR</li>
-  <li class="list-group-item wr-2-item">WR</li>
-  <li class="list-group-item rb-item">RB</li>
-  <li class="list-group-item te-item">TE</li>
-  <li class="list-group-item flx-item">FLX</li>
-  <li class="list-group-item k-item">K</li>
-  <li class="list-group-item d-st-item">D/ST</li>
-</ul>
-  </div>
-</div>
-</div> <!-- end col-md-3-->
-
-  <div class="col-md-3">
-
-<div class="panel panel-default">
-  <div class="player-4 panel-heading">Player 4</div>
-  <div class="panel-body">
-    <ul class="list-group fantasy-scroll">
-  <li class="list-group-item qb-item">QB</li>
-  <li class="list-group-item wr-1-item">WR</li>
-  <li class="list-group-item wr-2-item">WR</li>
-  <li class="list-group-item rb-item">RB</li>
-  <li class="list-group-item te-item">TE</li>
-  <li class="list-group-item flx-item">FLX</li>
-  <li class="list-group-item k-item">K</li>
-  <li class="list-group-item d-st-item">D/ST</li>
-</ul>
-  </div>
-</div>
-  </div> <!-- end col-md-3-->
-
- <!-- Available Players Container --> 
-   <div class="col-md-8">
-
-<div class="panel panel-default">
-  <div class="panel-heading">Available Players</div>
-  <div class="panel-body">
-    <ul class="list-group football-player-list-scroll">
-  <li class="list-group-item available-players"></li>
-  </ul>
-  </div>
-</div>
-  </div>
-<!-- Pick History Container -->
-<div class="col-md-4">
-
-<div class="panel panel-default">
-  <div class="panel-heading">Pick History</div>
-  <div class="panel-body">
-
-    <ul class="list-group history-list-scroll">
-  <li class="list-group-item pick-history">football player name</li>
-  </ul>
-  </div>
-</div>
-  </div>
-<!-- Chat Box Button-->
 <div class="container text-center">
 	<div class="row">
-        <div class="round hollow text-left">
+        <div class="round hollow text-center">
         <a href="#" id="addClass"><span class="glyphicon glyphicon-comment"></span> Open in chat </a>
         </div>
 	</div>
 </div>
-</div> <!-- end panel row -->
-</div> <!-- end main container -->
-      </div> <!-- end jumbotron -->
 
 
-<!-- Chat Box Popup -->
 <div class="popup-box chat-popup" id="qnimate">
     		  <div class="popup-head">
 				<div class="popup-head-left pull-left"><img src="http://bootsnipp.com/img/avatars/bcf1c0d13e5500875fdd5a7e8ad9752ee16e7462.jpg" alt="iamgurdeeposahan"> Gurdeep Osahan</div>
@@ -169,7 +39,10 @@
 						<button data-widget="remove" id="removeClass" class="chat-header-button pull-right" type="button"><i class="glyphicon glyphicon-off"></i></button>
                       </div>
 			  </div>
-			<div class="popup-messages">	
+			<div class="popup-messages">
+    		
+			
+			
 			
 			<div class="direct-chat-messages">
                     
@@ -177,7 +50,8 @@
 					<div class="chat-box-single-line">
 								<abbr class="timestamp">October 8th, 2015</abbr>
 					</div>
-									
+					
+					
 					<!-- Message. Default to the left -->
                     <div class="direct-chat-msg doted-border">
                       <div class="direct-chat-info clearfix">
@@ -205,7 +79,9 @@
 					<div class="chat-box-single-line">
 						<abbr class="timestamp">October 9th, 2015</abbr>
 					</div>
-							
+			
+					
+					
 					<!-- Message. Default to the left -->
                     <div class="direct-chat-msg doted-border">
                       <div class="direct-chat-info clearfix">
@@ -227,7 +103,20 @@
                     </div>
                     <!-- /.direct-chat-msg -->
 					
+					
+                    
+
+                    
+
                   </div>
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			</div>
 			<div class="popup-messages-footer">
@@ -239,13 +128,7 @@
 			<button class="bg_none pull-right"><i class="glyphicon glyphicon-thumbs-up"></i> </button>
 			</div>
 			</div>
-	  </div> <!-- end chat box -->
-
-      <footer class="footer">
-        <p>&copy; 2016 Company, Inc.</p>
-      </footer>
-
-    </div> <!-- /container -->
+	  </div>
 
 
   <!--link to Javascript -->
