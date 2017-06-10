@@ -26,9 +26,15 @@ countdown();
       console.log(response);
 			 for (var i = 0; i < response.AuctionValues.length; i++){
 				 console.log(response.AuctionValues[i].displayName);
+				 var playerDiv = $("<div>");
+				 var p = $("<p>").text(response.AuctionValues[i].displayName);
+				 playerDiv.append(p);
+				 $(".available-players").append(playerDiv);
+
+
 			 }
 			 
-			 var playerName = response.AuctionValues[i].displayName;
+			 
 
 			 
 			 
@@ -36,3 +42,5 @@ countdown();
 			});
 		}
 	displayPlayerInfo();
+
+	
