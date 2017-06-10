@@ -1,3 +1,9 @@
 .margin-space-bottom-60 {
     margin-bottom: 60px;
 }
+
+.fantasy-scroll {
+    max-height: 100px;
+    overflow: scroll;
+
+}
