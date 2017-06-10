@@ -24,8 +24,13 @@ countdown();
       method: "GET",
       }).done(function(response) {
       console.log(response);
-			 for (var i = 0; i < response.AuctionValues.length; i++);
-			 console.log(i);
+			 for (var i = 0; i < response.AuctionValues.length; i++){
+				 console.log(response.AuctionValues[i].displayName);
+			 }
+			 
+			 var playerName = response.AuctionValues[i].displayName;
+
+			 
 			 
 	
 			});
