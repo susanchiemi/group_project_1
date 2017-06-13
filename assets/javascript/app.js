@@ -9,7 +9,7 @@ $("#addClass").click(function () {
             });
   })
 function countdown(){
-	seconds = 60;
+	seconds = 90;
 	$(".timer").html('<h3>Time Remaining: ' + seconds + '</h3>');
 	//sets timer to go down
 	time = setInterval(showCountdown, 1000);
