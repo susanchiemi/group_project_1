@@ -1,3 +1,37 @@
+
+
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDgLpYPFelBMVtKFvSmZB8Gj9dbZxDzjGs",
+    authDomain: "project-one-7b2df.firebaseapp.com",
+    databaseURL: "https://project-one-7b2df.firebaseio.com",
+    projectId: "project-one-7b2df",
+    storageBucket: "project-one-7b2df.appspot.com",
+    messagingSenderId: "628186120697"
+  };
+  firebase.initializeApp(config);
+
+  var database = firebase.database();
+
+	var player1 = "";
+
+	var player2 = "";
+
+	var player3 = "";
+
+	var player4 = "";
+
+
+database.ref().set({
+	player1: playerOne,
+	player2: playerTwo,
+	player3: playerThree,
+	player4: playerFour
+       
+      });
+
+
   //Chat Box Function 
   $(function(){
 $("#addClass").click(function () {
