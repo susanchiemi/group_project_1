@@ -1,35 +1,35 @@
 
 
 
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDgLpYPFelBMVtKFvSmZB8Gj9dbZxDzjGs",
-    authDomain: "project-one-7b2df.firebaseapp.com",
-    databaseURL: "https://project-one-7b2df.firebaseio.com",
-    projectId: "project-one-7b2df",
-    storageBucket: "project-one-7b2df.appspot.com",
-    messagingSenderId: "628186120697"
-  };
-  firebase.initializeApp(config);
+//   // Initialize Firebase
+//   var config = {
+//     apiKey: "AIzaSyDgLpYPFelBMVtKFvSmZB8Gj9dbZxDzjGs",
+//     authDomain: "project-one-7b2df.firebaseapp.com",
+//     databaseURL: "https://project-one-7b2df.firebaseio.com",
+//     projectId: "project-one-7b2df",
+//     storageBucket: "project-one-7b2df.appspot.com",
+//     messagingSenderId: "628186120697"
+//   };
+//   firebase.initializeApp(config);
 
-  var database = firebase.database();
+//   var database = firebase.database();
 
-	var player1 = "";
+// 	var player1 = "";
 
-	var player2 = "";
+// 	var player2 = "";
 
-	var player3 = "";
+// 	var player3 = "";
 
-	var player4 = "";
+// 	var player4 = "";
 
 
-database.ref().set({
-	player1: playerOne,
-	player2: playerTwo,
-	player3: playerThree,
-	player4: playerFour
+// database.ref().set({
+// 	player1: playerOne,
+// 	player2: playerTwo,
+// 	player3: playerThree,
+// 	player4: playerFour
        
-      });
+//       });
 
 
   //Chat Box Function 
@@ -70,10 +70,24 @@ countdown();
       console.log(response);
 			 for (var i = 0; i < response.AuctionValues.length; i++){
 				 console.log(response.AuctionValues[i].displayName);
-				 var playerDiv = $("<div>");
+         var playerName = response.AuctionValues[i].displayName;
+         var playerPos = response.AuctionValues[i].position;
+         var playerValue = response.AuctionValues[i].avgPrice;
+
+
+
+				 var playerDiv = $("<td>");
 				 var p = $("<a>").text(response.AuctionValues[i].displayName);
 				 playerDiv.append(p);
-				 $(".available-players").append(playerDiv);
+				 $(".player-name").append(playerDiv);
+
+    function myFunction() {
+    var table = document.getElementById("table-hover");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = "NEW CELL1";
+    cell2.innerHTML = "NEW CELL2";
 
 
 			 }
