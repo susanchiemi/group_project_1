@@ -69,25 +69,26 @@ countdown();
       }).done(function(response) {
       console.log(response);
 			 for (var i = 0; i < response.AuctionValues.length; i++){
-				 console.log(response.AuctionValues[i].displayName);
-         var playerName = response.AuctionValues[i].displayName;
+				 var playerName = response.AuctionValues[i].displayName;
          var playerPos = response.AuctionValues[i].position;
          var playerValue = response.AuctionValues[i].avgPrice;
-
-
-
-				 var playerDiv = $("<td>");
-				 var p = $("<a>").text(response.AuctionValues[i].displayName);
+         console.log(playerName);
+         console.log(playerPos);
+         console.log(playerValue);
+				 var playerDiv = $("<div>");
+				 var p = $("<a>").text(playerName);
 				 playerDiv.append(p);
 				 $(".player-name").append(playerDiv);
 
-    function myFunction() {
-    var table = document.getElementById("table-hover");
-    var row = table.insertRow(0);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    cell1.innerHTML = "NEW CELL1";
-    cell2.innerHTML = "NEW CELL2";
+         var positionDiv = $("<div>");
+         var q = $("<p>").text(playerPos);
+         positionDiv.append(q);
+         $(".position").append(positionDiv);
+
+         var valueDiv = $("<div>");
+         var r = $("<p>").text(playerValue);
+         valueDiv.append(r);
+         $(".value").append(valueDiv);
 
 
 			 }
