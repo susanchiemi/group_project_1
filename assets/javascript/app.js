@@ -60,6 +60,27 @@ $('#startBtn').on('click', function(){
 	countdown();
 });
 
+$('.player-name').on('click', '.players', function (e) {
+  e.preventDefault();
+  var playerName = $(this).attr("name");
+  var playerPosition = $(this).attr("position");
+  var playerValue = $(this).attr("value");
+  var playerTeam = $(this).attr("team");
+  console.log(playerTeam);
+
+
+
+  var html = "<ul>"
+  html += "<li> Name: " + playerName + "</li>"
+  html += "<li> Team: " + playerTeam + "</li>"
+  html += "<li> Position: " + playerPosition + "</li>"
+  html += "<li> Value: " + playerValue + "</li>"
+  html += "</ul>" 
+  // var html = "<ul>Player Name: " + playerName 
+  // html += "Player position: " + playerPosition
+  // html += "Team: " + playerTeam
+   $(".football-player-stats").html(html);
+   })
 
   function displayPlayerInfo() {
         
@@ -74,23 +95,37 @@ $('#startBtn').on('click', function(){
 				 var playerName = response.AuctionValues[i].displayName;
          var playerPos = response.AuctionValues[i].position;
          var playerValue = response.AuctionValues[i].avgPrice;
+         var playerTeam = response.AuctionValues[i].team;
          console.log(playerName);
          console.log(playerPos);
          console.log(playerValue);
 				 var playerDiv = $("<div>");
-				 var p = $("<a>").text(playerName);
+         var p = $("<a id='player'-" + i +" class='players' data-toggle='modal' data-target='#myModal'>").text(playerName);
+         p.attr("name", playerName);
+         p.attr("position", playerPos);
+         p.attr("value", playerValue);
+         p.attr("team", playerTeam);
+
 				 playerDiv.append(p);
 				 $(".player-name").append(playerDiv);
 
          var positionDiv = $("<div>");
          var q = $("<a>").text(playerPos);
+        //  q.attr("position", playerPos);
          positionDiv.append(q);
          $(".position").append(positionDiv);
 
          var valueDiv = $("<div>");
          var r = $("<a>").text(playerValue);
+        //  r.attr("value", playerValue);
          valueDiv.append(r);
          $(".value").append(valueDiv);
+
+        //  var teamDiv = $("<div>");
+        //  var s = $("<a>").text(playerTeam);
+        //  s.attr("team", playerTeam);
+
+                 
 
 
 			 }
@@ -103,4 +138,39 @@ $('#startBtn').on('click', function(){
 			});
 		}
 	displayPlayerInfo();
+
+
+
+
+
+
+
+
+  // var players = [];
+
+  // addPlayer.on("click", function(){
+       
+  //    var playerName = $("somedivhere").val().trim();
+  //    players.push(playerName)
+
+  //    if(players.length == 1){
+  //         $("#player1").append(playerName);
+
+
+
+
+  //  firebase.initializeApp(config);
+
+  //  var database = firebase.database();
+  //  var playersRef = database.ref('/players')
+
+  //  playersRef.set({
+  //         firstPlayer: players[0],
+  //         secondPlayer: players[1],
+  //         thirdPlayer: players[2],
+  //         fourthPlayer: players[3],
+  //  });
+
+
+
 

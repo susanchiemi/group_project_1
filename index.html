@@ -9,14 +9,12 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  
 </head>
 
 <body>
 
-  <!--Modal Popup -->
-<div class="container">
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
@@ -32,27 +30,26 @@
           <div class="col-md-6">
             <div class="panel panel-default">
   <div class="panel-body football-gif">
-    <div id="_giphy_tv"></div>
-<script>
-    var _giphy_tv_tag="odell beckham";
-    var g = document.createElement('script'); g.type = 'text/javascript'; g.async = true;
-    g.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'giphy.com/static/js/widgets/tv.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(g, s);
-</script>
+    <div id="_giphy_tv">      
+    </div>
+
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/BxXUnEcyoiO2c" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/nfl-penalizing-prayed-BxXUnEcyoiO2c">via GIPHY</a></p>
+
   </div>
 </div>
           </div>
           <div class="col-md-6">
             <div class="panel panel-default">
   <div class="panel-body football-player-stats">
-    Football player stat - Api?
+
+    
   </div>
 </div>
           </div>
         </div>
         </div>
         <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary">Draft Player</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
       </div>
@@ -66,20 +63,16 @@
 
 <!-- start main content -->
 <div class="container">
-  <div class="col-md-3">
 
-<div class="panel panel-default">
-  <div class="panel-heading">Timer</div>
-  <div class="timer panel-body">
-    <h2>00:00</h2>
-  </div>
-</div>
-<button class='btn btn-primary' id='startBtn'>Start</button>
-</div>
       <div class="jumbotron">
 
 <div class="row">
-  <div class="col-md-12"><!--<h3 class="text-center margin-space-bottom-60">Fantasy Football Draft</h3>--></div>
+  <div class="col-md-12">
+    <img class="ball-image" src="assets/images/Ball-07.jpg" />
+    <h3 class="text-center">Fantasy Football Player Draft</h3>
+    <br/>
+    <br/>
+  </div>
   </div>
 
         
@@ -167,19 +160,10 @@
 <!-- **************************************************************************************************** -->
 <div class="margin-space-bottom-60"></div>
 
-<div class-"container available-player-container">
-<div class="row">
-
-  <div class="col-md-8"></div>
-  <div class="col-md-4"></div>
-</div>
-
-
-
 <div class="container">      
-  <div class="col-md-9">      
+  <div class="col-md-9 football-player-tble">      
 
- <table class="table table-hover">
+ <table class="football-player-list-scroll table">
     <thead>
       <tr>
         <th>Available Player</th>
@@ -200,27 +184,18 @@
 
 
 <!-- Pick History Container -->
-<div class="col-md-9">
-
-  <!-- Pick History Container -->
 <div class="row">
 <div class="col-md-3">
-
-
 <div class="panel panel-default">
   <div class="panel-heading">Pick History</div>
   <div class="panel-body">
-
     <ul class="list-group history-list-scroll">
   <li class="list-group-item pick-history">football player name</li>
   </ul>
   </div>
 </div>
-
-  </div> <!-- end pick history -->
-
-  </div>
-</div> <!-- end row -->
+  </div> <!-- end .col-3 -->
+ </div> <!-- end pick history row -->
 </div><!--end container -->
 
 <!-- **************************************************************************************************** -->
@@ -333,10 +308,13 @@
 <!-- **************************************************************************************************** -->
 
       <footer class="footer">
+        <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
         <p>&copy; 2016 Company, Inc.</p>
       </footer>
 
-    </div> <!-- /container -->
+    </div> <!-- jumbotron -->
+    </div>
 
 
   <!--link to Javascript -->
