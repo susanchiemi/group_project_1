@@ -8,6 +8,7 @@
   <title>Fantasy Football Draft App</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/darkly-theme.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   
 </head>
@@ -67,8 +68,8 @@
 
 <div class="row">
   <div class="col-md-12">
-  <div class="col-md-3"><img class="ball-image" src="assets/images/Ball-07.jpg" /></div>
-  <div class="col-md-9"><h3 class="text-left">Fantasy Football Player Draft</h3></div>
+  <img class="ball-image" src="assets/images/Ball-07.jpg" />
+  <h1 class="text-right">Fantasy Football Player Draft</h1>
   </div>
   </div>
 
@@ -78,9 +79,9 @@
   <div class="row">
   <div class="col-md-3">
 <div class="panel panel-default">
-  <div class="player-1 panel-heading">Player 1</div>
+  <div class="player-1 panel-heading">User 1</div>
   <div class="panel-body">
-  <ul class="list-group fantasy-scroll">
+  <ul class="list-group fantasy-scroll visible-scrollbar">
   <li class="list-group-item qb-item">QB</li>
   <li class="list-group-item wr-1-item">WR</li>
   <li class="list-group-item wr-2-item">WR</li>
@@ -99,9 +100,9 @@
   <div class="col-md-3">
 
 <div class="panel panel-default">
-  <div class="player-2 panel-heading">Player 2</div>
+  <div class="player-2 panel-heading">User 2</div>
   <div class="panel-body">
-   <ul class="list-group fantasy-scroll">
+   <ul class="list-group fantasy-scroll visible-scrollbar">
   <li class="list-group-item qb-item">QB</li>
   <li class="list-group-item wr-1-item">WR</li>
   <li class="list-group-item wr-2-item">WR</li>
@@ -119,9 +120,9 @@
   <div class="col-md-3">
 
 <div class="panel panel-default">
-  <div class="player-3 panel-heading">Player 3</div>
+  <div class="player-3 panel-heading">User 3</div>
   <div class="panel-body">
-    <ul class="list-group fantasy-scroll">
+    <ul class="list-group fantasy-scroll visible-scrollbar">
   <li class="list-group-item qb-item">QB</li>
   <li class="list-group-item wr-1-item">WR</li>
   <li class="list-group-item wr-2-item">WR</li>
@@ -138,9 +139,9 @@
   <div class="col-md-3">
 
 <div class="panel panel-default">
-  <div class="player-4 panel-heading">Player 4</div>
+  <div class="player-4 panel-heading">User 4</div>
   <div class="panel-body">
-    <ul class="list-group fantasy-scroll">
+    <ul class="list-group fantasy-scroll visible-scrollbar">
   <li class="list-group-item qb-item">QB</li>
   <li class="list-group-item wr-1-item">WR</li>
   <li class="list-group-item wr-2-item">WR</li>
@@ -155,16 +156,16 @@
   </div> <!-- end col-md-3-->
 
 <!-- **************************************************************************************************** -->
-<div class="margin-space-bottom-60"></div>
-
-<div class="container">      
-  <div class="col-md-9 football-player-tble">      
-
- <table class="football-player-list-scroll table">
+<div class="clearfix"></div>
+<div class="empty-space"></div>
+<div class="container">
+  <div class="col-md-9 football-player-tble visible-scrollbar"> 
+    <h4 class="text-center">DRAFT A PLAYER FOR YOUR TEAM</h4>     
+ <table class="table">
     <thead>
       <tr>
         <th>Available Player</th>
-        <th>Positon</th>
+        <th>Position</th>
         <th>Value</th>
       </tr>
     </thead>
@@ -189,15 +190,16 @@
   <div class="timer panel-body">
     <h2>00:00</h2>
   </div>
+  <br/>
    <button class='btn btn-primary' id='startBtn'>Start</button>
 </div>
   </div> <!-- end .col-3 -->
 
 <div class="col-md-3">
-<div class="panel panel-default fantasy-scroll">
+<div class="panel panel-default">
   <div class="panel-heading">Pick History</div>
   <div class="panel-body">
-    <ul class="list-group history-list-scroll">
+    <ul class="list-group fantasy-scroll visible-scrollbar">
   <li class="list-group-item pick-history">football player name</li>
   </ul>
   </div>
@@ -318,9 +320,7 @@
 <!-- **************************************************************************************************** -->
 
       <footer class="footer">
-        <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-        <p>&copy; 2016 Company, Inc.</p>
+        <p>&copy; 2017 Project-1-Group-5</p>
       </footer>
 
     </div> <!-- jumbotron -->

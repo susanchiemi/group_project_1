@@ -111,19 +111,13 @@ $('.player-name').on('click', '.players', function (e) {
 
          var positionDiv = $("<div>");
          var q = $("<a>").text(playerPos);
-<<<<<<< HEAD
-=======
-        //  q.attr("position", playerPos);
->>>>>>> 2329f0e65e7e1b7b469cd6463cb7ad6285945820
+
          positionDiv.append(q);
          $(".position").append(positionDiv);
 
          var valueDiv = $("<div>");
          var r = $("<a>").text(playerValue);
-<<<<<<< HEAD
-=======
-        //  r.attr("value", playerValue);
->>>>>>> 2329f0e65e7e1b7b469cd6463cb7ad6285945820
+
          valueDiv.append(r);
          $(".value").append(valueDiv);
 
