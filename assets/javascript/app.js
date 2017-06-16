@@ -81,12 +81,12 @@ countdown();
 				 $(".player-name").append(playerDiv);
 
          var positionDiv = $("<div>");
-         var q = $("<p>").text(playerPos);
+         var q = $("<a>").text(playerPos);
          positionDiv.append(q);
          $(".position").append(positionDiv);
 
          var valueDiv = $("<div>");
-         var r = $("<p>").text(playerValue);
+         var r = $("<a>").text(playerValue);
          valueDiv.append(r);
          $(".value").append(valueDiv);
 
