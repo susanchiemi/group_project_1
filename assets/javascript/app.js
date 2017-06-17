@@ -83,7 +83,8 @@ $('.btn-draft-player').on('click', function(e) {
   // find the element <ul> where the player information is shown
   var nameOnly = modalBody.find('h3').text();
   console.log(nameOnly);
-  $(".player-1-team").append("<br>" + nameOnly);
+  $(".player-1-team").append(nameOnly + "<br>");
+  $(".pick-history").append(nameOnly + "<br>");
   clearTimeout(time);
   countdown();
 })
@@ -134,10 +135,7 @@ $('#startBtn').on('click', function(){
 //   countdown();
 // }); the working button is below
 
-$('.btn-primary').on('click', function(){
-  clearTimeout(time);
-  countdown();
-});
+
 
 $('.player-name').on('click', '.players', function (e) {
   e.preventDefault();
@@ -149,7 +147,7 @@ $('.player-name').on('click', '.players', function (e) {
 
 
   var html = "<ul>"
-  html += "<li> Name: " + playerName + "</li>"
+  html += "<h3>" + playerName + "</h3>"
   html += "<li> Team: " + playerTeam + "</li>"
   html += "<li> Position: " + playerPosition + "</li>"
   html += "<li> Value: " + playerValue + "</li>"
