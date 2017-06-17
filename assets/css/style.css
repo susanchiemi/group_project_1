@@ -64,6 +64,11 @@ h1 {
 #startBtn {
     margin-bottom: 10px;
     margin-left: 10px;
+    margin-top: 10px;
+}
+
+.input-group-addon {
+   margin: 10px; 
 }
 
 /* Chat Box CSS */
