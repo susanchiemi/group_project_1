@@ -15,8 +15,6 @@
 
 <body>
 
-
-
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-lg">
@@ -59,9 +57,8 @@
   
 </div>
 
-<!-- **************************************************************************************************** -->
+<!-- START MAIN CONTENT  **************************************************************************************************** -->
 
-<!-- start main content -->
 <div class="container">
 
       <div class="jumbotron">
@@ -73,13 +70,12 @@
   </div>
   </div>
 
-        
+<!-- USERS/PLAYERS  **************************************************************************************************** -->     
   <div class="container">
-  <!-- Computer player/user -->
   <div class="row">
   <div class="col-md-3">
 <div class="panel panel-default">
-  <div class="player-1 panel-heading">User 1</div>
+  <div class="player-1 panel-heading"><div class="name-1">User 1</div></div>
   <div class="panel-body">
   <ul class="list-group fantasy-scroll visible-scrollbar">
   <li class="list-group-item qb-item">QB</li>
@@ -91,7 +87,6 @@
   <li class="list-group-item k-item">K</li>
   <li class="list-group-item d-st-item">D/ST</li>
 </ul>
-
   </div>
 </div>
 
@@ -100,17 +95,17 @@
   <div class="col-md-3">
 
 <div class="panel panel-default">
-  <div class="player-2 panel-heading">User 2</div>
+  <div class="player-2 panel-heading">Marc</div>
   <div class="panel-body">
    <ul class="list-group fantasy-scroll visible-scrollbar">
-  <li class="list-group-item qb-item">QB</li>
-  <li class="list-group-item wr-1-item">WR</li>
-  <li class="list-group-item wr-2-item">WR</li>
-  <li class="list-group-item rb-item">RB</li>
-  <li class="list-group-item te-item">TE</li>
-  <li class="list-group-item flx-item">FLX</li>
-  <li class="list-group-item k-item">K</li>
-  <li class="list-group-item d-st-item">D/ST</li>
+  <li class="list-group-item qb-item">David Johnson</li>
+  <li class="list-group-item wr-1-item">Ezekiel Elliott</li>
+  <li class="list-group-item wr-2-item">Le'Veon Bell</li>
+  <li class="list-group-item rb-item">Antonio Brown</li>
+  <li class="list-group-item te-item">LeSean McCoy</li>
+  <li class="list-group-item flx-item">Devonta Freeman</li>
+  <li class="list-group-item k-item">Julio Jones</li>
+  <li class="list-group-item d-st-item">Mike Evans</li>
 </ul>
   </div>
 </div>
@@ -120,17 +115,17 @@
   <div class="col-md-3">
 
 <div class="panel panel-default">
-  <div class="player-3 panel-heading">User 3</div>
+  <div class="player-3 panel-heading">Susan</div>
   <div class="panel-body">
     <ul class="list-group fantasy-scroll visible-scrollbar">
-  <li class="list-group-item qb-item">QB</li>
-  <li class="list-group-item wr-1-item">WR</li>
-  <li class="list-group-item wr-2-item">WR</li>
-  <li class="list-group-item rb-item">RB</li>
-  <li class="list-group-item te-item">TE</li>
-  <li class="list-group-item flx-item">FLX</li>
-  <li class="list-group-item k-item">K</li>
-  <li class="list-group-item d-st-item">D/ST</li>
+  <li class="list-group-item qb-item">Melvin Gordon</li>
+  <li class="list-group-item wr-1-item">Jordan Howard</li>
+  <li class="list-group-item wr-2-item">Aaron Rodgers</li>
+  <li class="list-group-item rb-item">Odell Beckham Jr.</li>
+  <li class="list-group-item te-item">Rob Gronkowski</li>
+  <li class="list-group-item flx-item">Jay Ajayi</li>
+  <li class="list-group-item k-item">Jordy Nelson</li>
+  <li class="list-group-item d-st-item">Tom Brady</li>
 </ul>
   </div>
 </div>
@@ -139,17 +134,17 @@
   <div class="col-md-3">
 
 <div class="panel panel-default">
-  <div class="player-4 panel-heading">User 4</div>
+  <div class="player-4 panel-heading">Derryck</div>
   <div class="panel-body">
     <ul class="list-group fantasy-scroll visible-scrollbar">
-  <li class="list-group-item qb-item">QB</li>
-  <li class="list-group-item wr-1-item">WR</li>
-  <li class="list-group-item wr-2-item">WR</li>
-  <li class="list-group-item rb-item">RB</li>
-  <li class="list-group-item te-item">TE</li>
-  <li class="list-group-item flx-item">FLX</li>
-  <li class="list-group-item k-item">K</li>
-  <li class="list-group-item d-st-item">D/ST</li>
+  <li class="list-group-item qb-item">Todd Gurley</li>
+  <li class="list-group-item wr-1-item">Marshawn Lynch</li>
+  <li class="list-group-item wr-2-item">Michael Thomas</li>
+  <li class="list-group-item rb-item">Matt Ryan</li>
+  <li class="list-group-item te-item">Leonard Fournette</li>
+  <li class="list-group-item flx-item">Matt Ryan</li>
+  <li class="list-group-item k-item">T.Y. Hilton</li>
+  <li class="list-group-item d-st-item">Isaiah Crowell</li>
 </ul>
   </div>
 </div>
@@ -195,6 +190,14 @@
 <div class="row">
 
 <div class="col-md-3">
+
+  <div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">@</span>
+  <input type="text" class="form-control userLogin" placeholder="Login" aria-describedby="basic-addon1">
+
+</div>
+<button class='btn btn-primary btn-sm text-right'  id='submitBtn'>Submit</button>
+<div class="empty-space"></div>
 <div class="panel panel-default timer-box">
   <div class="panel-heading">Timer</div>
   <div class="timer panel-body">
@@ -202,13 +205,11 @@
   </div>
   <br/>
 
-  <div class="input-group">
-  <span class="input-group-addon" id="basic-addon1">@</span>
-  <input type="text" class="form-control" placeholder="Login" aria-describedby="basic-addon1">
+   <button class='btn btn-primary btn-sm' id='startBtn'>Start</button>
+
 </div>
 
-   <button class='btn btn-primary' id='startBtn'>Start</button>
-</div>
+
   </div> <!-- end .col-3 -->
 
 <div class="col-md-3">
