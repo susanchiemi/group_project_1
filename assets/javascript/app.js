@@ -202,7 +202,7 @@ $('.player-name').on('click', '.players', function (e) {
   $('.player-name').on('click', '.players', function (){
 	 var player = $(this).attr("name");
    console.log("HERE", player)
-      var queryURL2 = "http://api.giphy.com/v1/gifs/search?q=" +
+      var queryURL2 = "https://api.giphy.com/v1/gifs/search?q=" +
         player + "%nfl" + "&api_key=dc6zaTOxFJmzC&limit=1";
 
       $.ajax({
