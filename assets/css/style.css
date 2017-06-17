@@ -76,6 +76,11 @@ h1 {
    margin: 10px; 
 }
 
+.player-1-team {
+    height: 180px;
+    
+}
+
 /* Chat Box CSS */
 body
 {
