@@ -1,35 +1,79 @@
 
 
 
-//   // Initialize Firebase
-//   var config = {
-//     apiKey: "AIzaSyDgLpYPFelBMVtKFvSmZB8Gj9dbZxDzjGs",
-//     authDomain: "project-one-7b2df.firebaseapp.com",
-//     databaseURL: "https://project-one-7b2df.firebaseio.com",
-//     projectId: "project-one-7b2df",
-//     storageBucket: "project-one-7b2df.appspot.com",
-//     messagingSenderId: "628186120697"
-//   };
-//   firebase.initializeApp(config);
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyDgLpYPFelBMVtKFvSmZB8Gj9dbZxDzjGs",
+  authDomain: "project-one-7b2df.firebaseapp.com",
+  databaseURL: "https://project-one-7b2df.firebaseio.com",
+  projectId: "project-one-7b2df",
+  storageBucket: "project-one-7b2df.appspot.com",
+  messagingSenderId: "628186120697"
+};
+firebase.initializeApp(config);
 
-//   var database = firebase.database();
+var database = firebase.database();
 
-// 	var player1 = "";
+// var player1 = "";
 
-// 	var player2 = "";
+// var player2 = "";
 
-// 	var player3 = "";
+// var player3 = "";
 
-// 	var player4 = "";
+// var player4 = "";
+
+function enterName() {
+  var txt;
+  var person = $(".userLogin").val().trim();
+  //instead of prompt use a input box and btn
+  if (person == null || person == "") {
+    txt = "lame-o";
+    $(".name1").html($("<p>").html(txt));
+  } else {
 
 
-// database.ref().set({
-// 	player1: playerOne,
-// 	player2: playerTwo,
-// 	player3: playerThree,
-// 	player4: playerFour
-       
-//       });
+    database.ref("/players").on("value", function (snapshot) {
+      console.log('value player 1 ', snapshot.val())
+      var player1 = snapshot.child("player1").exists();
+      var player2 = snapshot.child("player2").exists();
+      console.log(player1);
+      console.log(player2);
+      if (!player1) {
+        //add on click that submits player
+        database.ref("/players").set({
+          player1: person
+        })
+      txt = person;
+      $(".name1").html($("<p>").html(txt));
+      // } else if (snapshot.val().user) {
+      //   database.ref("/player2").on("value", function (snapshot) {
+      //     if (!snapshot.val().user) {
+      //       database.ref("/player2").set({
+      //         user: person
+      //       })
+      //       return;
+      //     }
+      //   })
+
+    } else if (player1 === true && !player2){
+      //use the same on click to add this player
+        var addNewPlayer = {};
+        addNewPlayer['/player2'] = person;
+        database.ref("/players").update(addNewPlayer)
+        txt = person;
+        $(".name2").html($("<p>").html(txt));       
+      }
+    
+
+    })
+      // $(".player-1").html($("<p>").html(txt));
+    };
+}
+
+$("#submitBtn").on("click", function(){
+enterName();
+});
+    
 
 
   //Chat Box Function 
@@ -47,6 +91,11 @@ function countdown(){
 	$(".timer").html('<h3>Time Remaining: ' + seconds + '</h3>');
 	//sets timer to go down
 	time = setInterval(showCountdown, 1000);
+//   if (running === false) {
+//   clearInterval(seconds);
+// } else {
+//   intervalHandle = setInterval(tick, 1000);
+// }
 }
 
 function showCountdown(){
@@ -56,8 +105,24 @@ function showCountdown(){
 		clearInterval(time);
     }
 }
+
+
 $('#startBtn').on('click', function(){
-	countdown();
+  $("#startBtn").attr("disabled", true)
+    countdown();
+});
+
+//HELP US WITH THIS BIBEK!!!!!!!!
+// $('.btn-primary').on('click', '.players', function(){
+//   var playerName1 = $(this).attr("name");
+//   console.log(playerName1);
+//   clearTimeout(time);
+//   countdown();
+// }); the working button is below
+
+$('.btn-primary').on('click', function(){
+  clearTimeout(time);
+  countdown();
 });
 
 $('.player-name').on('click', '.players', function (e) {
