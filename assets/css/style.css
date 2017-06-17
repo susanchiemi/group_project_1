@@ -67,6 +67,11 @@ h1 {
     margin-top: 10px;
 }
 
+#submitBtn {
+    margin-top: 10px;
+}
+
+
 .input-group-addon {
    margin: 10px; 
 }
